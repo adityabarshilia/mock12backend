@@ -80,7 +80,7 @@ app.post("/calculate", (req, res) => {
     let MaturityVal = Math.floor(
       aia * (((1 + roi / 100) ** years - 1) / (roi / 100))
     );
-    res.send({MaturityVal});
+    res.send(MaturityVal);
   } catch (e) {
     res.send(e);
   }
